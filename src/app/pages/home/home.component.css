@@ -1,0 +1,20 @@
+.container__home{
+    background-image: url("/assets/img/janko-ferlic-sfL_QOnmy00-unsplash.jpg");
+    height: 100%;
+    display: flex;
+    gap: 15px;
+    padding: 20px 80px;
+    flex-direction: column;
+    object-fit: cover;
+    justify-content: center;
+}
+
+.title{
+    padding-top: 30px;
+    font-size: 100px;
+    color: aliceblue;
+}
+.description{
+    font-size: 30px;
+    color: aliceblue;
+}

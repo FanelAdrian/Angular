@@ -1,0 +1,8 @@
+
+   .container__form{
+    background-image: url("/assets/img/janko-ferlic-sfL_QOnmy00-unsplash.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+   }
