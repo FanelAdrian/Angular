@@ -1,0 +1,56 @@
+<main class="perfil__container">
+
+    <div class="cards__container">
+    <div class="perfil__card">
+        <div class="img__container">
+        <img src={{standarUser.url}} alt="" class="img__perfil">
+    </div>
+    <div class="header__card">
+        <h2 class="title__card">{{standarUser.nombreCompleto()}}</h2>
+    </div>
+        <div class="input-group2">
+            <label class="label">Nombre</label>
+            <input type="text" name="Nombre"  class="input" readonly="readonly" value="{{standarUser.nombre}}">
+          </div>
+          <div class="input-group2">
+            <label class="label">Apellidos</label>
+            <input type="text" name="Apellido"  class="input" readonly="readonly" value="{{standarUser.apellidos}}">
+            
+          </div>
+          <div class="input-group2">
+            <label class="label">Correo electrónico</label>
+            <input type="text" name="Correo"  class="input" readonly="readonly" value="{{standarUser.correo}}">
+
+          </div>
+
+    </div>
+        <form action="" class="card">
+            <div class="header__card">
+                <h2 class="title__card">Editar Perfil</h2>
+            </div>
+            <div class="input-group">
+                <input required="" type="text" name="Nombre" autocomplete="off" class="input" #input1>
+                <label class="user-label">Nombre</label>
+              </div>
+              <div class="input-group">
+                <input required="" type="text" name="Apellido" autocomplete="off" class="input" #input2>
+                <label class="user-label">Apellido</label>
+              </div>
+              <div class="input-group">
+                <input required="" type="text" name="Correo" autocomplete="off" class="input" #input3>
+                <label class="user-label">Correo</label>
+              </div>
+              <div class="input-group">
+                <input required="" type="text" name="Contraseña" autocomplete="off" class="input" #input4>
+                <label class="user-label">URL Imagen perfil</label>
+              </div>
+              <button type ="button" on-click = enviarInfo(input1.value,input2.value,input3.value,input4.value) class="button">
+                Cambiar Datos
+                <div class="arrow-wrapper">
+                    <div class="arrow"></div>
+                </div>
+            </button>
+            <div class="footer__card"></div>
+        </form>
+    </div>
+</main>
