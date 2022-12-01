@@ -1,21 +1,85 @@
-
 <main class="body__libros">
-    <div class="container">
-        <div class="card">
-            <h2 class="title">{{standarBook.titulo}}</h2>
-            <div class="card-hidden">
-                <h3>{{standarBook.titulo}}</h3>
-                <h5 class="title2">Tipo de Tapa</h5>
-                <p class="info">{{standarBook.tipoLibro}}</p>
-                <h5 class="title2">Autor</h5>
-                <p class="info">{{standarBook.autor}}</p>
-                <h5 class="title2">Photo</h5>
-                <p class="info">{{standarBook.photo}}</p>
-                <a class="precio">{{standarBook.precio}} € <i class='bx bxl-twitter'></i></a>
-              
+    <div class="container__libros" *ngIf="libros.length > 1; else noLibros">
+
+        <div class="container" *ngFor="let libro of libros; even as esPar">
+            <div class="card" [ngStyle]="{'background-image':'url('+libro.photo +')'}">
+                <h2 class="title">{{libro.titulo}}</h2>
+                <div class="card-hidden">
+                    <div class="">
+                        <h3 class="title2">{{libro.titulo}}</h3>
+                        <p class="info">{{libro.tipoLibro}}</p>
+                    </div>
+                    <div class="">
+                        <h4 class="title2">Autor</h4>
+                        <p class="info">{{libro.autor}}</p>
+                    </div>
+                    <!-- <h4 class="title2">ID Usuario</h4>
+                    <p class="info">{{libro.Id_usuario}}</p> -->
+                    <div class="">
+                        <h4 class="title2">ID del Libro</h4>
+                        <p class="info">{{libro.Id_libro | ref}}</p>
+                    </div>
+                    <a class="button" [ngClass]="{'cambiar':esPar}">{{libro.precio}} €</a>
+                </div>
             </div>
-  
+            <div class="card-border" [ngClass]="{'cambiar':esPar}"></div>
         </div>
-        <div class="card-border"></div>
     </div>
+    <form action="" class="card2">
+            <div class="header__card2">
+                <h2 class="title__card2"></h2>
+            </div>
+            <div class="imput__body">
+                <div class="input-group2">
+               
+                    <input  type="text" name="Nombre" autocomplete="off" class="input" #input1>
+                    <label class="user-label">Titulo</label>
+                </div>
+                <div class="input-group2">
+                    <input  type="text" name="Apellido" autocomplete="off" class="input" #input2>
+                    
+                    <label class="user-label">Tipo De Tapa</label>
+                </div>
+                <div class="input-group2">
+                    <input  type="text" name="Correo" autocomplete="off" class="input" #input3>
+       
+                    <label class="user-label">Autor</label>
+                </div>
+                <div class="input-group2">
+                    <input  type="text" name="Contraseña" autocomplete="off" class="input" #input4>
+          
+                    <label class="user-label">Precio</label>
+                </div>
+                <div class="input-group2">
+                    <input  type="text" name="Contraseña" autocomplete="off" class="input" #input5>
+                  
+                    <label class="user-label">URL img</label>
+                </div>
+                <div class="input-group2">
+                    <input  type="text" name="Contraseña" autocomplete="of" class="input" #input6>
+      
+                    <label class="user-label">ID Libro</label>
+                </div>
+                <div class="input-group2">
+                    <input  type="text" name="Contraseña" autocomplete="of" class="input" #input7>
+     
+                    <label class="user-label">ID Usuario</label>
+                </div>
+            </div>
+            <button type="button"
+                on-click=enviarLibro(input1.value,input2.value,input3.value,input4.value,input5.value,input6.value,input7.value)
+                class="button2">
+                Añadir Nuevo Libro
+                <div class="arrow-wrapper">
+                    <div class="arrow"></div>
+                </div>
+            </button>
+            <div class="footer__card2"></div>
+    </form>
 </main>
+<ng-template #noLibros>
+    <div class="noLibros">
+        <p class="text__p"> Nuestras estanterias estan vacias :(,
+        introduza nuevos libros.</p>
+    </div>
+</ng-template>
