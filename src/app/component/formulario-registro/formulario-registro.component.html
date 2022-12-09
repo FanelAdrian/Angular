@@ -1,22 +1,30 @@
 <form action="" class="card">
         <h2 class="registrar">Regístrate</h2>
     <div class="input-group">
-        <input required="" type="text" name="Nombre" autocomplete="off" class="input">
+        <input required="" type="text" name="Nombre" autocomplete="off" class="input" #nombre>
         <label class="user-label">Nombre</label>
       </div>
       <div class="input-group">
-        <input required="" type="text" name="Apellido" autocomplete="off" class="input">
-        <label class="user-label">Apellido</label>
+        <input required="" type="email" name="Apellido" autocomplete="off" class="input" #apellidos>
+        <label class="user-label">Apellidos</label>
       </div>
       <div class="input-group">
-        <input required="" type="text" name="Correo" autocomplete="off" class="input">
+        <input required="" type="text" name="Correo" autocomplete="off" class="input" #correo>
         <label class="user-label">Correo</label>
       </div>
       <div class="input-group">
-        <input required="" type="text" name="Contraseña" autocomplete="off" class="input">
+        <input required="" type="text" name="Correo" autocomplete="off" class="input" #foto>
+        <label class="user-label">Foto</label>
+      </div>
+      <div class="input-group">
+        <input required="" type="password" name="Contraseña" autocomplete="off" class="input" #password>
         <label class="user-label">Contraseña</label>
       </div>
-      <button class="button">
+      <div class="input-group">
+        <input required="" type="password" name="Contraseña" autocomplete="off" class="input" #password2>
+        <label class="user-label">Repetir Contraseña</label>
+      </div>
+      <button class="button" type="button" (click)="registro(nombre.value,apellidos.value,correo.value,foto.value,password.value,password2.value)">
         Registrarse
         <div class="arrow-wrapper">
             <div class="arrow">

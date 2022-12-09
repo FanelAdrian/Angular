@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './component/header/header.component';
@@ -10,6 +10,10 @@ import { FormularioRegistroComponent } from './component/formulario-registro/for
 import { RegistroComponent } from './pages/registro/registro.component';
 import { LibrosComponent } from './pages/libros/libros.component';
 import { RefPipe } from './pipe/ref.pipe';
+import { AddLibrosComponent } from './pages/add-libros/add-libros.component';
+import { UpdateLibrosComponent } from './pages/update-libros/update-libros.component';
+import { LoginComponent } from './pages/login/login.component';
+import { FormularioLoginComponent } from './component/formulario-login/formulario-login.component';
 
 
 
@@ -23,11 +27,16 @@ import { RefPipe } from './pipe/ref.pipe';
     RegistroComponent,
     LibrosComponent,
     RefPipe,
+    AddLibrosComponent,
+    UpdateLibrosComponent,
+    LoginComponent,
+    FormularioLoginComponent
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

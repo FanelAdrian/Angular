@@ -3,9 +3,12 @@
     <img src="assets/img/My_bOOKS_logo.png" alt="" class="nav__logo">
     </div>
     <div class="nav__a__container">
-    <a routerLink="home" class="nav__a">Home</a>
-    <a routerLink="registro" class="nav__a">Registro</a>
-    <a routerLink="perfil" class="nav__a">Perfil</a>
-    <a routerLink="libros" class="nav__a">Libros</a>
+    <a routerLink="home" class="nav__a" *ngIf="logueado==false">Home</a>
+    <a routerLink="registro" class="nav__a" *ngIf="logueado==false">Registro</a>
+    <a routerLink="login" class="nav__a" *ngIf="logueado==false">Login</a>
+    <a routerLink="perfil" class="nav__a" *ngIf="logueado==true">Perfil</a>
+    <a routerLink="libros" class="nav__a" *ngIf="logueado==true">Libros</a>
+    <a routerLink="Añadir_Libros" class="nav__a" *ngIf="logueado==true">Añadir Libros</a>
+    <a routerLink="Modificar_Libros" class="nav__a" *ngIf="logueado==true">Modificar Libros</a>
 </div>
 </nav>

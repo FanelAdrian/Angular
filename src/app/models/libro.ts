@@ -1,20 +1,20 @@
 
 export class Libro {
-    public Id_libro: number
-    public Id_usuario: number
+    public id_libro: number
+    public id_usuario: number
     public titulo: string
-    public tipoLibro: string
+    public tipo: string
     public autor: string
     public precio: number
-    public photo: string
+    public foto: string
 
     constructor(titulo: string, tipoLibro: string, autor: string, precio: number, photo: string, Id_libro: number=0, Id_usuario: number=0) {
-        this.Id_libro = Id_libro;
-        this.Id_usuario = Id_usuario;
+        this.id_libro = Id_libro;
+        this.id_usuario = Id_usuario;
         this.titulo = titulo;
-        this.tipoLibro = tipoLibro;
+        this.tipo = tipoLibro;
         this.autor = autor,
         this.precio = precio; 
-        this.photo = photo;
+        this.foto = photo;
     }
 }

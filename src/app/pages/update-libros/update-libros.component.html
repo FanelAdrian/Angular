@@ -1,0 +1,45 @@
+<main class="container">
+    <form action="" class="card2">
+        <div class="header__card2">
+            <h2 class="title__card2">Modificar libro</h2>
+        </div>
+        <div class="imput__body">
+            <div class="input-group2">
+                <input type="text" name="Contraseña" autocomplete="of" class="input" #input6>
+
+                <label class="user-label">ID Libro</label>
+            </div>
+            <div class="input-group2">
+                <input type="text" name="Nombre" autocomplete="off" class="input" #input1>
+
+                <label class="user-label">Titulo</label>
+            </div>
+            <div class="input-group2">
+                <input type="text" name="Apellido" autocomplete="off" class="input" #input2>
+
+                <label class="user-label">Tipo De Tapa</label>
+            </div>
+            <div class="input-group2">
+                <input type="text" name="Correo" autocomplete="off" class="input" #input3>
+
+                <label class="user-label">Autor</label>
+            </div>
+            <div class="input-group2">
+                <input type="text" name="Contraseña" autocomplete="off" class="input" #input4>
+
+                <label class="user-label">Precio</label>
+            </div>
+            <div class="input-group2">
+                <input type="text" name="Contraseña" autocomplete="off" class="input" #input5>
+
+                <label class="user-label">URL img</label>
+            </div>
+        </div>
+        <button type="button" class="button2" (click)="editLibro(input1.value,input2.value,input3.value,input4.value,input5.value,input6.value)">
+            Modificar Libro
+            <div class="arrow-wrapper">
+                <div class="arrow"></div>
+            </div>
+        </button>
+    </form>
+</main>

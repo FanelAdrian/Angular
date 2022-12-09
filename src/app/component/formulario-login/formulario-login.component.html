@@ -1,0 +1,19 @@
+<form action="" class="card">
+    <h2 class="registrar">Iniciar Sesión</h2>
+  <div class="input-group">
+    <input required="" type="text" name="Correo" autocomplete="off" class="input" #correo>
+    <label class="user-label">Correo</label>
+  </div>
+  <div class="input-group">
+    <input required="" type="password" name="Contraseña" autocomplete="off" class="input" #password>
+    <label class="user-label">Contraseña</label>
+  </div>
+  <button class="button" type="button" (click)="login(correo.value,password.value)">
+    Iniciar Sesión
+    <div class="arrow-wrapper">
+        <div class="arrow">
+        </div>
+      </div>
+</button>
+</form>
+
